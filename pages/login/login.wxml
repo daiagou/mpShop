@@ -1,0 +1,11 @@
+<view bindtap="bindViewTap" class="userinfo">
+  <image wx:if="{{userInfo.avatarUrl}}" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <text wx:if="{{userInfo.nickName}}" class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+
+  <image wx:if="{{userInfo.avatarUrl==undefined}}" class="userinfo-avatar" src="../../img/tabBar/42.png" background-size="cover"></image>
+
+  <button wx:if="{{userInfo.avatarUrl==undefined}}" type='primary' class='userinfo-nickname' size="mini" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+    点击登陆
+  </button>
+</view>

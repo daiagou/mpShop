@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/me/me",
+    "pages/buy/buy",
+    "pages/goodsDetail/goodsDetail",
+    "pages/shopCart/shopCart",
+    "pages/shop/shop",
+    "pages/logs/logs",
+    "pages/index/index",
+    "pages/orderDetail/orderDetail"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "常州兄弟塑业",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#3080c0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "首页",
+        "iconPath": "img/tabBar/12.png",
+        "selectedIconPath": "img/tabBar/11.png"
+      },
+      {
+        "pagePath": "pages/shopCart/shopCart",
+        "text": "购物车",
+        "iconPath": "img/tabBar/32.png",
+        "selectedIconPath": "img/tabBar/31.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "img/tabBar/42.png",
+        "selectedIconPath": "img/tabBar/41.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

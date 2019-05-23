@@ -1,0 +1,63 @@
+@import '../common/common.wxss';
+
+
+.cur{
+   border-bottom: 4rpx solid #f23232;
+  color: #f23232; 
+}
+
+.order-item-amount {
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-list-main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20rpx;
+}
+
+.order-list-content {
+  border-radius: 20rpx;
+  width: 700rpx;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 0rpx;
+  margin: 10rpx 0rpx;
+}
+
+.order-list-unSelected {
+  width: 34%;
+  text-align: center;
+  padding-bottom: 20rpx;
+}
+
+.order-list-selected {
+  width: 34%;
+  text-align: center;
+  color: red;
+  border-bottom: 1px solid red;
+  padding-bottom: 20rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  padding: 50rpx 0;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #333;
+}

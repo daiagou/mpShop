@@ -1,0 +1,31 @@
+
+@import '../common/common.wxss';
+
+
+.cartNotNull{
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+
+
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+
+
+}
+.container .cart-image {
+  width: 120px;
+  height: 120px;
+}
+
+
+
+
+
+

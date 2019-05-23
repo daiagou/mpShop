@@ -1,0 +1,36 @@
+<view wx:if="{{isCartEmpty}}" class="container">
+  <image src="../../img/cart-null.png" class="cart-image" />
+  <view>空空如也~</view>
+</view>
+
+
+<view wx:if="{{!isCartEmpty}}">
+
+<view style='width:100%;text-align:center'>
+  <image class='cartNotNull' src="../../img/cart-notnull.png" />
+</view>
+<view style='width:100%;text-align:center;margin-bottom: 40rpx;'>
+  总金额: ￥{{totalAmount}}
+</view>
+<view class="line"></view>
+
+
+
+<view wx:for="{{cartGoodsList}}" wx:key="goods" wx:for-item="goods" class='flex-dir-row' style='margin-bottom: 40rpx;text-align:center;'>
+  <view style='width:300rpx;'>{{goods.goodsName}}</view>
+  <view style='width:300rpx;'>￥{{goods.price}}</view>
+  <view style='width:300rpx'>{{goods.goodsCount}}</view>
+</view>
+
+
+
+
+<view class="line"></view>
+
+<view style='text-align:center;margin-top:100rpx'>
+
+  <button type='primary' size='mini' bindtap="toBuy">
+    立即购买
+  </button>
+</view>
+</view>

@@ -1,0 +1,21 @@
+
+<view  >
+
+<swiper  style='height:800rpx'
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  circular="{{circular}}"
+>
+  <block wx:for="{{imgUrls}}" wx:key="item">
+    <swiper-item>
+      <image src="{{item}}" style='height:800rpx'  />
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+
+
+
+

@@ -1,0 +1,44 @@
+<!--导航  -->
+<view class="tui-fixed-left">
+  <scroll-view class="tui-city-scroll" scroll-x="true">
+    <text bindtap="getStatus" id="NAV{{index}}" class="tui-nav-li {{index === status ? 'tui-nav-active' : ''}}" data-index="{{index}}" wx:for="{{navList}}" wx:key="item">{{item}}</text>
+  </scroll-view>
+</view>
+
+
+<!--列表滚动区  -->
+<view class="tui-fixed-y">
+  <scroll-view class="tui-city-scroll-y" scroll-y="true" scroll-into-view="NAV{{status}}" scroll-with-animation="true">
+    <view wx:for="{{navList}}" wx:key="item">
+      <view id="NAV{{index}}" class="tui-list-head">{{item}}</view>
+      <view class="tui-list-li">
+
+
+        <view wx:for="{{listData[item]}}" wx:key="goods" wx:for-item="goods">
+        <view class='line'></view>
+        <view class='flex-dir-row'>
+          <image class='goodsImg' src='{{goods.picUrl}}' bindtap='seeGoodsDetail' data-item="{{goods}}"></image>
+          <view class='flex-dir-column'>
+            <text class='goodsName'>{{goods.goodsName}}</text>
+            <text class='goodsPrice'>￥{{goods.price}}</text>
+            <!-- 主容器 -->
+            <view class="stepper">
+              <!-- 减号 -->
+              <text class="{{goods.goodsCount==0?'disabled':'normal'}}" bindtap="bindMinus" data-key='{{item}}' data-index='{{index}}'>-</text>
+              <!-- 数值 -->
+              <input type="number" disabled bindchange="bindManual" value="{{goods.goodsCount}}" />
+              <!-- 加号 -->
+              <text class="normal" bindtap="bindPlus" data-key='{{item}}' data-index='{{index}}'>+</text>
+            </view>
+          </view>
+        </view>
+        </view>
+
+
+
+
+
+      </view>
+    </view>
+  </scroll-view>
+</view>
